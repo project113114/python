@@ -1,0 +1,12 @@
+# input
+x = int(input("Enter the first num"))
+y = int(input("Enter the second num"))
+ls = [[i,j] for i in range(x) for j in range(y) if(x>=0 and y>=0) ]
+print("cartisine product of " , x , "and" , y) 
+#for loop for printing each element of list line by line
+z=0
+for k in ls:
+  print(ls[z])
+  z += 1
+print("number of element are")
+print(len(ls))

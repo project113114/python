@@ -4,7 +4,7 @@ echo "$a"
 while [ "$a" == "" ];
 do
   clear
-  nano Graph_random.py
-  python Graph_random.py
+  nano Xsquargraph.py
+  python Xsquargraph.py
   read -p "enter" a
 done
