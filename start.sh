@@ -4,7 +4,7 @@ echo "$a"
 while [ "$a" == "" ];
 do
   clear
-  nano rangeevent_randome_percentage.py
-  python rangeevent_randome_percentage.py
+  nano Graph_random.py
+  python Graph_random.py
   read -p "enter" a
 done

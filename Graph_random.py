@@ -10,6 +10,7 @@ z =int(input("Range:- "))
 # Set Total Repetation Event
 x = int(input("Event:- "))
 # Creating Empty List
+
 ls = list()
 plotls = list()
 # Defining t for Condition True When List is Completed For Rest Process
@@ -25,6 +26,7 @@ def per():
 print(f"{Fore.RED} excuting process ")
 for i in range(0,x):
   t += 1
+  
   # Genrating random number in range upto event completed
   r = rn.randint(1,z)
   # Adding random number in empty list
@@ -39,7 +41,26 @@ for i in range(0,x):
       plotls.append(ls.count(ti))
       # breaking loop after completing printing 
       if(ti == z):
+        
+        mp.plot(plotls)        
         print(f"{Fore.RED} completed")
-        mp.plot(plotls)
-        mp.show()
+        # option for save fig
+        op = input("do you want to save")
+        if(op.upper() == "Y"):
+          gn = str(input("Enter name of file to save"))
+          try:
+            fo = str(input("Enter format"))
+            dp = int(input("Enter the dpi"))
+          except Exception as e:
+           print(e)
+          fname = "graph/" + gn + "." + fo
+          try:
+            print(fname)
+            print(type(fname))
+            mp.savefig(fname,dpi=dp , bbox_inches='tight')
+          except Exception as er:
+            print(er)        
+          mp.show()
+        else:
+          print("not save")
         break
