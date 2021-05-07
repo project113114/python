@@ -63,4 +63,5 @@ for i in range(0,x):
           mp.show()
         else:
           print("not save")
+          mp.show()
         break
